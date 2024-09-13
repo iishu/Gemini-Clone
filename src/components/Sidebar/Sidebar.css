@@ -7,5 +7,10 @@
 }
 
 .sidebar img{
-    
+    width:20px;
+}
+.sidebar .menu{
+    display: block;
+    margin-left: 10px;
+    cursor: pointer;
 }
