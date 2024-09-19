@@ -14,11 +14,12 @@ const ContextProvider=(props)=>{
         setResultData("")
         setLoadings(true)
         setShowResult(true)
+        setRecentPrompt(input)
         const response=await runChat(input)
         setResultData(response)
         setLoadings(false)
         setInput("")
-        
+
     }
      const contextValue={
         prevPrompt,
