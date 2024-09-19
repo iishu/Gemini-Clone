@@ -13,6 +13,8 @@ const Main = () => {
           <img src={assets.user_icon} alt="" />
         </div>
         <div className="main-container">
+          {!showResult
+          ?<>
           <div className="greet">
             <p><span>Hello, Dev.</span></p>
             <p>How can I help you today?</p>
@@ -36,15 +38,19 @@ const Main = () => {
             </div>
             
           </div>
+          </>
+          :<div className="result">
+            </div>}
+          
           <div className="main-bottom">
             <div className="search-box">
               <input onChange={(e)=>setInput(e.target.value)} value={input} type="text" placeholder="Enter a prompt here"/>
               <div>
                 <img src={assets.gallery_icon} alt="" />
                 <img src={assets.mic_icon} alt="" />
-                <img src={assets.send_icon} alt="" />
+                <img onClick={()=>onSent()} src={assets.send_icon} alt="" />
               </div>
-            </div>
+            </div> 
             <p className="bottom-info">
               Gemini may display inaccurate info, including about people, so double-check its response. Your privacy and Gemini Apps.
             </p>
