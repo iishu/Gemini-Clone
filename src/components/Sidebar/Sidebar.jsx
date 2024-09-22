@@ -5,8 +5,8 @@ import { Context } from "../../Context/Context";
 
 const Sidebar = () => {
   const [extended, setExtended] = useState(false);
-  const { prevPrompts } = useContext(Context); // Check if prevPrompts exists
-  
+  const { prevPrompt } = useContext(Context); // Check if prevPrompts exists
+  console.log(prevPrompt);
   return (
     <div className="sidebar">
       <div className="top">
@@ -27,8 +27,8 @@ const Sidebar = () => {
         {extended ? (
           <div className="recent">
             <p className="recent-title">Recent</p>
-            {(prevPrompts && prevPrompts.length > 0) ? (
-              prevPrompts.map((item, index) => (
+            {(prevPrompt && prevPrompt.length > 0) ? (
+              prevPrompt.map((item, index) => (
                 <div className="recent-entry" key={index}>
                   <img src={assets.message_icon} alt="message icon" />
                   <p>{item}...</p>
