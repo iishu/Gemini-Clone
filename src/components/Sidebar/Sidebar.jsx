@@ -31,7 +31,7 @@ const Sidebar = () => {
               prevPrompt.map((item, index) => (
                 <div className="recent-entry" key={index}>
                   <img src={assets.message_icon} alt="message icon" />
-                  <p>{item}...</p>
+                  <p>{item.slice(0,18)}...</p>
                 </div>
               ))
             ) : (
